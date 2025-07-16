@@ -5,7 +5,7 @@ ID: CT06DG2247
 Domain: Python Programming                                                                         
 Duration: June to July 2025                                
 
-##📄 Project Overview: Automated PDF Report Generation using Python
+#📄 Project Overview: Automated PDF Report Generation using Python
 🎯 Objective:
 
 To develop a Python script that reads structured data from a file (CSV), performs basic analysis (e.g., average, max, min), and generates a well-formatted PDF report using libraries like FPDF.
