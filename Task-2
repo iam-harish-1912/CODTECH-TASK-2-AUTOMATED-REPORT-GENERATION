@@ -1,0 +1,47 @@
+import csv
+from fpdf import FPDF
+
+# Read and analyze data
+filename = "data.csv"
+names = []
+scores = []
+
+with open(filename, 'r') as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        names.append(row['Name'])
+        scores.append(int(row['Score']))
+
+# Basic statistics
+average_score = sum(scores) / len(scores)
+max_score = max(scores)
+min_score = min(scores)
+
+# Create PDF report
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font("Arial", size=12)
+
+pdf.cell(200, 10, txt="Student Score Report", ln=True, align='C')
+pdf.ln(10)
+
+# Table header
+pdf.cell(60, 10, "Name", 1)
+pdf.cell(60, 10, "Score", 1)
+pdf.ln()
+
+# Table rows
+for name, score in zip(names, scores):
+    pdf.cell(60, 10, name, 1)
+    pdf.cell(60, 10, str(score), 1)
+    pdf.ln()
+
+pdf.ln(10)
+pdf.cell(200, 10, txt=f"Average Score: {average_score:.2f}", ln=True)
+pdf.cell(200, 10, txt=f"Highest Score: {max_score}", ln=True)
+pdf.cell(200, 10, txt=f"Lowest Score: {min_score}", ln=True)
+
+# Save the PDF
+pdf.output("score_report.pdf")
+
+print("PDF report generated as 'score_report.pdf'")
