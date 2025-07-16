@@ -1,9 +1,9 @@
 # CODTECH-TASK-2-AUTOMATED-REPORT-GENERATION
-Name: HARISH K
-Company: CODTECH IT SOLUTIONS
-ID: CT06DG2247
-Domain: Python Programming
-Duration: June to July 2025
+Name: HARISH K                                                                               
+Company: CODTECH IT SOLUTIONS                                                                  
+ID: CT06DG2247                                                                
+Domain: Python Programming                                                                         
+Duration: June to July 2025                                
 
 ##📄 Project Overview: Automated PDF Report Generation using Python
 🎯 Objective:
